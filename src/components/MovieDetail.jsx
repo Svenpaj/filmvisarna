@@ -119,8 +119,8 @@ export default function MovieDetail() {
                   <li className="genreTag">{genre}</li>
                 ))}
               </ul>
-              <h4 className="movie-length">Längd: {movie.duration}</h4>
-              <h4 className="movie-rated">Åldersgräns: {movie.rating}</h4>
+              <h4 className="movie-length">Längd: {movie.length}</h4>
+              <h4 className="movie-rated">Åldersgräns: {movie.rated}</h4>
             </section>
           </section>
           <section className="movieDescription">
