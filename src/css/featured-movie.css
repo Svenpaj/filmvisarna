@@ -125,7 +125,18 @@ main {
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1600px) {
+  .featuredMovie img {
+    width: 100%;
+  }
+  .featuredMovieCTA-image h1 {
+    color: white;
+    position: relative;
+    font-size: 3vw;
+  }
+}
+
+@media screen and (min-width: 2000px) {
   .featuredMovie img {
     width: 100%;
   }
