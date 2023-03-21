@@ -146,3 +146,14 @@ main {
     font-size: 3vw;
   }
 }
+
+@media screen and (min-width: 3000px) {
+  .featuredMovie img {
+    width: 100%;
+  }
+  .featuredMovieCTA-image h1 {
+    color: white;
+    position: relative;
+    font-size: 3vw;
+  }
+}
