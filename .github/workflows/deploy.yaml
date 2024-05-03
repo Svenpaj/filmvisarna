@@ -19,7 +19,6 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             echo "Deploying to the server"
+            source /root/.profile
             cd /var/www/filmvisarna
             git pull
-            sudo npm install
-            sudo npm run build
