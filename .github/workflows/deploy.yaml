@@ -20,6 +20,7 @@ jobs:
           script: |
             echo "Deploying to the server"
             echo "Checking Node.js and npm versions"
+            export PATH=$PATH:/usr/bin
             node -v
             npm -v
             cd /var/www/filmvisarna
