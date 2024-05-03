@@ -18,7 +18,9 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
+            echo "Deploying to the server"
+            echo "Checking Node.js and npm versions"
+            node -v
+            npm -v
             cd /var/www/filmvisarna
             git pull
-            cd /var/www/filmvisarna && npm install
-            cd /var/www/filmvisarna && npm run build
