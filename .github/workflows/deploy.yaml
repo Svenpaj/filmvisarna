@@ -19,7 +19,9 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             echo "Deploying to the server"
-            source /root/.bashrc
+            source /root/.nvm/nvm.sh
+            nvm use v20.12.2
+            echo "Checking node and npm versions"
             node -v
             npm -v
             cd /var/www/filmvisarna
