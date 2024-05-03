@@ -28,8 +28,8 @@ jobs:
             git pull
             npm ci
             npm run build
+            pm2 stop dotnetBio
             cd /var/www/MyMinimalApi
             rm -r dist
             cp -r /var/www/filmvisarna/dist .
-            pm2 delete dotnetBio
-            pm2 start --name dotnetBio "dotnet run"
+            pm2 start dotnetBio
