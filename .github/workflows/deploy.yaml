@@ -22,7 +22,10 @@ jobs:
             rm -r dist/
             cd /var/www/filmvisarna
             git pull
+            cd /var/www/filmvisarna
             npm ci
+            cd /var/www/filmvisarna
             npm run build
+            cd /var/www/filmvisarna
             cp -r dist/ /var/www/MyMinimalApi
             pm2 restart dotnetBio
