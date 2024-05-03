@@ -17,15 +17,11 @@ jobs:
           username: ${{ secrets.USER }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          script: |
-            cd /var/www/MyMinimalApi
-            rm -r dist/
-            cd /var/www/filmvisarna
-            git pull
-            cd /var/www/filmvisarna
-            npm ci
-            cd /var/www/filmvisarna
-            npm run build
-            cd /var/www/filmvisarna
-            cp -r dist/ /var/www/MyMinimalApi
-            pm2 restart dotnetBio
+      - name: Deploying
+        run: |
+          cd /var/www/filmvisarna
+          git pull
+          npm install
+          npm run build
+          cp -r dist/ /var/www/MyMinimalApi
+          pm2 restart dotnetBio
