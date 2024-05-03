@@ -17,10 +17,7 @@ jobs:
           username: ${{ secrets.USER }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-        run: |
           script: |
-            cd /var/www/MyMinimalApi
-            rm -r dist/
             cd /var/www/filmvisarna
             git pull
             npm install
