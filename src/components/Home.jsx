@@ -76,7 +76,7 @@ export default function Home() {
       </div>
       <div className="featuredMovieCTA-container">
         <div className="featuredMovieCTA-image">
-          <a href="/movie/inglourious-basterds" style={{ textDecoration: "none" }}>
+          <a href="/movie/babylon" style={{ textDecoration: "none" }}>
             <h1> Babylon </h1>
           </a>
         </div>

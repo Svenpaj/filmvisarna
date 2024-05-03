@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 
-let title = "IRONBOY FILMS";
+let title = "SVENPAJ FILMS";
 
 const titleChange = async () => {
   const resp = await fetch("/api/header-title");
@@ -16,7 +16,7 @@ export default function Home() {
     <nav>
       <Link to="/">
         <div className="header-logo">
-          <i className="fa-solid fa-film"></i>
+          <i className="fa-solid fa-film"> </i>
           {title}
         </div>
       </Link>
