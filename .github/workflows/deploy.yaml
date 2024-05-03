@@ -26,3 +26,9 @@ jobs:
             npm -v
             cd /var/www/filmvisarna
             git pull
+            npm ci
+            npm run build
+            cd /var/www/MyMinimalApi
+            rm -r dist
+            cp -r /var/www/filmvisarna/dist .
+            pm2 restart dotnetBio
