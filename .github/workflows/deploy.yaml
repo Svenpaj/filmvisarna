@@ -19,7 +19,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+      - name: Build
         run: npm run build
+      - name: Start server
         run: nohup node index.js &
 
       - name: Install Cypress Dependencies
