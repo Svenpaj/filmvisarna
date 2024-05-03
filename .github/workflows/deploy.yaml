@@ -31,4 +31,5 @@ jobs:
             cd /var/www/MyMinimalApi
             rm -r dist
             cp -r /var/www/filmvisarna/dist .
-            pm2 restart dotnetBio
+            pm2 delete dotnetBio
+            pm2 start --name dotnetBio "dotnet run"
