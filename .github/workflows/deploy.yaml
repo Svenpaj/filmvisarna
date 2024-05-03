@@ -22,4 +22,4 @@ jobs:
             source /root/.profile
             cd /var/www/filmvisarna
             git pull
-            which npm
+            npm install
