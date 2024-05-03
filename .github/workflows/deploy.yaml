@@ -28,7 +28,7 @@ jobs:
         run: cd ./cypress && npm ci
 
       - name: Run Cypress tests
-        run: npm run test
+        run: cd ./cypress && npm run test
 
   deploy:
     needs: cypress_tests
