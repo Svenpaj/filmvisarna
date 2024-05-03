@@ -1,0 +1,28 @@
+name: Test Deploy
+
+on:
+  push:
+    branches: [ "dev" ]
+
+jobs:
+
+  deploy:
+    runs-on:
+      ubuntu-latest
+    steps:
+      - name: Doing a deploy
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd /var/www/MyMinimalApi
+            rm -r dist/
+            cd /var/www/filmvisarna
+            git pull
+            npm ci
+            npm run build
+            cp -r dist/ /var/www/MyMinimalApi
+            pm2 restart dotnetBio
