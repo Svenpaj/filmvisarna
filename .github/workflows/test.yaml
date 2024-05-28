@@ -1,9 +1,10 @@
-name: Test Deploy
+name: CI Workflow
 
 # This workflow will run on every push to the repository in the dev branch.
 on:
-  push:
-    branches: [ "feature-new-headline" ]
+  pull_request:
+    branches:
+      - dev
 
 # The jobs to run in this workflow are defined here.
 jobs:
