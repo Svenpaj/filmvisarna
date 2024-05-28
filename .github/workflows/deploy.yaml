@@ -4,6 +4,8 @@ name: Test Deploy
 on:
   push:
     branches: [ "dev" ]
+  pull_request:
+    branches: [ "dev" ]
 
 # The jobs to run in this workflow are defined here.
 jobs:
