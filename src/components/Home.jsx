@@ -77,7 +77,7 @@ export default function Home() {
       <div className="featuredMovieCTA-container">
         <div className="featuredMovieCTA-image">
           <a href="/movie/babylon" style={{ textDecoration: "none" }}>
-            <h1> Linus är detta ok? </h1>
+            <h1> Linus är detta ok? och mer text </h1>
           </a>
         </div>
       </div>
