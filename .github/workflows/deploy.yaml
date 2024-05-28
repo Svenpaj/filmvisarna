@@ -2,8 +2,12 @@ name: deploy
 
 # This workflow will run on every push to the repository in the dev branch.
 on:
-  merge:
-    branches: [ "dev" ]
+  workflow_run:
+    workflows: ["Test Deploy"]
+    types:
+      - completed
+    branches:
+      - dev
 
 # The jobs to run in this workflow are defined here.
 jobs:
@@ -38,8 +42,7 @@ jobs:
 
   # The deploy job will run on the ubuntu-latest runner and will have the following steps.
   deploy:
-    trigger:
-    - dev
+    if: github.event.workflow_run.conclusion == 'success'
   # This job will run only when the cypress_tests job is successful.
     needs: cypress_tests
     runs-on:
