@@ -42,6 +42,7 @@ jobs:
 
   # The deploy job will run on the ubuntu-latest runner and will have the following steps.
   deploy:
+    if: github.event.workflow_run.conclusion == 'success'
   # This job will run only when the cypress_tests job is successful.
     needs: cypress_tests
     runs-on:
