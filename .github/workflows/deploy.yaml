@@ -75,13 +75,11 @@ jobs:
             echo "Checking node and npm versions"
             node -v
             npm -v
-            cd /var/www/filmvisarna
+            cd /srv/www/filmvisarna
             git pull
             rm -r cypress
             npm ci
             npm run build
-            cd /var/www/MyMinimalApi
-            rm -r dist
-            cp -r /var/www/filmvisarna/dist .
-            pm2 delete dotnetBio
-            pm2 start --name dotnetBio "dotnet run"
+            pm2 restart react-bio
+            pm2 restart reverse-proxy
+            
