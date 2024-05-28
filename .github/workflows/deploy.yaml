@@ -38,6 +38,8 @@ jobs:
 
   # The deploy job will run on the ubuntu-latest runner and will have the following steps.
   deploy:
+  trigger:
+  - dev
   # This job will run only when the cypress_tests job is successful.
     needs: cypress_tests
     runs-on:
