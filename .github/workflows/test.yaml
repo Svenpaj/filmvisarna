@@ -36,3 +36,22 @@ jobs:
       - name: Run Cypress tests
       # Change the directory to the cypress folder.
         run: cd ./cypress && npm run test
+
+  api-test:
+    needs: cypress_tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Start server
+        run: nohup node index.js &
+      - name: Run API tests
+        run: npm run test-api
