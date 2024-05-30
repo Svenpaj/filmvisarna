@@ -54,4 +54,4 @@ jobs:
       - name: Start server
         run: nohup node index.js &
       - name: Run API tests
-        run: npm run test-api
+        run: npm run api-test
