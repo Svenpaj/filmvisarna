@@ -42,11 +42,11 @@ export default function Footer() {
           <div className="social-media-wrap">
             <div className="footer-logo">
               <a id="footer-logo">
-                <i className="fa-solid fa-film"></i> IRONBOY FILMS
+                <i className="fa-solid fa-film"></i> SVENPAJ FILMS
               </a>
             </div>
             <p className="website-rights">
-              &copy; IRONBOY FILMS 2023. Alla rättigheter förbehållna
+              &copy; SVENPAJ FILMS 2023. Alla rättigheter förbehållna
             </p>
             <div className="social-icons">
               <a className="social-icon-link">

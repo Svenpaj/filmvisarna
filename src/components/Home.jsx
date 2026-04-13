@@ -70,14 +70,14 @@ export default function Home() {
     <>
       <div className="featuredMovie">
         {" "}
-        <section className="movie-background" style={{ background: `url(${"/images/babylon-bg.jpg"})  center top / cover no-repeat` }} >
+        <section className="movie-background" style={{ background: `url(${"/images/spirited-away-bg.jpg"})  center top / cover no-repeat` }} >
         </section>
         <div className="gradientFeaturedMovie"> </div>
       </div>
       <div className="featuredMovieCTA-container">
         <div className="featuredMovieCTA-image">
-          <a href="/movie/babylon" style={{ textDecoration: "none" }}>
-            <h1>Hej jag är en ändring från en demo</h1>
+          <a href="/movie/spirited-away" style={{ textDecoration: "none" }}>
+            <h1>Spirited Away</h1>
           </a>
         </div>
       </div>
